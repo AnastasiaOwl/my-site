@@ -15,3 +15,25 @@
       align-items: flex-start;
       padding: 150px 420px;
     }
+
+    .container{
+        display: flex;
+    }
+    
+    .js{
+        background-image: url('../background-images/colored_neon_js_icon.png');
+        margin: 30px; 
+        height: 160px;
+        width: 160px;
+        background-size: contain; 
+        background-repeat: no-repeat;
+    }
+
+    .react{
+        background-image: url('../background-images/pixelcut-export.png');
+        margin: 30px; 
+        height: 160px;
+        width: 160px;
+        background-size: contain; /* Ensure the image fits within the div */
+        background-repeat: no-repeat;
+    }

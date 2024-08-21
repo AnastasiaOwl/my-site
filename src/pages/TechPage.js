@@ -6,6 +6,10 @@ function TechPage(){
     <>
     <div className='techPage'>
         <div className='techPage-image'>
+            <div className='container'>
+               <div className='js'></div>
+               <div className='react'></div>
+            </div>
         </div>
         </div>
     </>
