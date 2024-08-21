@@ -1,6 +1,10 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
-import AboutPage from './pages/AboutPage';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+
+const AboutPage = lazy(()=>import('./pages/AboutPage'));
+const TechPage = lazy(()=>import('./pages/TechPage'));
+
 
 function App() {
   const [neonActive, setNeonActive] = useState(false);
@@ -28,8 +32,19 @@ function App() {
     }
   }, []);
 
+ 
   if (showAboutPage) {
-    return <AboutPage />;
+    return (
+      <Router>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<AboutPage />} />
+            <Route path="/tech" element={<TechPage />} />
+            <Route path="*" element={<Navigate to="/" />} /> {/* Redirect unknown routes to home */}
+          </Routes>
+        </Suspense>
+      </Router>
+    );
   }
 
   return (

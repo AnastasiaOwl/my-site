@@ -1,0 +1,17 @@
+.techPage{
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .techPage-image {
+      height: 100vh;
+      background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.211) 20%, rgba(0, 0, 0, 0.386) 80%, rgba(0, 0, 0, 0.907)), 
+      url('../background-images/aboutPage.jpg'); 
+      background-size: contain;
+      background-repeat: no-repeat; 
+      background-position: center;  
+      display: flex;
+      justify-content: flex-start; 
+      align-items: flex-start;
+      padding: 150px 420px;
+    }

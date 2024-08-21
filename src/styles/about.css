@@ -11,20 +11,42 @@
     background-repeat: no-repeat; 
     background-position: center;  
     display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    padding: 150px 420px;
+  }
+
+  .container {
+    width:700px;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .aboutPage-text{
-    font-size: 17px;
+    font-size: 16px;
     color:rgb(83, 175, 255);
-    width: 650px;
+    width: 700px;
     display:flex;
-    flex-direction: column;
     font-family: 'Consolas';
     text-align: justify; 
     line-height: 1.8;
-    padding: 10px;
+    padding-top: 10px;
+    font-size: 17px;
   }
   
+  .button-next{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color:rgb(83, 175, 255);
+    font-family: 'Consolas';
+    margin-top: 20px;
+    text-decoration: underline;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .button-next:hover {
+    font-size: 18px;
+  }
