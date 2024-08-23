@@ -4,36 +4,100 @@
   
   .techPage-image {
       height: 100vh;
+      background-size: cover; 
       background-image: 
       linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.211) 20%, rgba(0, 0, 0, 0.386) 80%, rgba(0, 0, 0, 0.907)), 
       url('../background-images/aboutPage.jpg'); 
       background-size: contain;
       background-repeat: no-repeat; 
       background-position: center;  
-      display: flex;
-      justify-content: flex-start; 
-      align-items: flex-start;
-      padding: 150px 420px;
+      position: relative; 
     }
 
-    .container{
+    .container-tech{
+         height: 90vh;
+         display:flex;
+         flex-direction: column;
+         justify-content: center; 
+         align-items: flex-end;
+         padding: 150px 420px;
+    }
+
+     .icons-tech{
         display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 35px; 
+        margin-top: 80px;
     }
     
-    .js{
-        background-image: url('../background-images/colored_neon_js_icon.png');
-        margin: 30px; 
-        height: 160px;
-        width: 160px;
-        background-size: contain; 
+    .icon {
+        width: 130px;
+        height: 130px;
+        background-size: contain;
         background-repeat: no-repeat;
+        background-position: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        cursor: pointer; 
+    }
+    
+    .icon:hover {
+        transform: scale(1.2);
+    }
+    
+    .js {
+        background-image: url('../background-images/colored_neon_js_icon.png');
+    }
+    
+    .react {
+        background-image: url('../background-images/pixelcut-export.png');
+    }
+    
+    .git {
+        background-image: url('../background-images/Github_icon-icons.com_66788.png');
+    }
+    
+    .db {
+        background-image: url('../background-images/Db-Icon-PNG-Photo.png');
+    }
+    
+    .node {
+        background-image: url('../background-images/node_js_logo_white_to_blue.png');
+        height: 180px; 
+        width: 180px;
+    }
+    
+    .css {
+        background-image: url('../background-images/html-css-js-icons-11563328364gmstz4ubs9.png');
     }
 
-    .react{
-        background-image: url('../background-images/pixelcut-export.png');
-        margin: 30px; 
-        height: 160px;
-        width: 160px;
-        background-size: contain; /* Ensure the image fits within the div */
-        background-repeat: no-repeat;
-    }
+    .button-next-tech{
+        background-color: transparent;
+        border: none;
+        font-size: 18px;
+        color:rgb(83, 175, 255);
+        font-family: 'Consolas';
+        margin-bottom: 10px;
+        text-decoration: underline;
+        align-items: center;
+        cursor: pointer;
+      }
+    
+      .button-next-tech:hover {
+        font-size: 20px;
+      }
+
+      .map{
+        position: absolute; 
+        top: 20px;
+        right: 80px;
+        background-color: transparent;
+        border: none;
+        color:rgb(23, 236, 255);
+        cursor: pointer;
+        font-size: 30px;
+      }
+      .map:hover{
+        font-size: 35px;
+      }
