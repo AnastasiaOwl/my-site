@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 
 const AboutPage = lazy(()=>import('./pages/AboutPage'));
 const TechPage = lazy(()=>import('./pages/TechPage'));
+const ProjectsPage = lazy(()=> import('./pages/ProjectsPage'));
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Routes>
             <Route path="/" element={<AboutPage />} />
             <Route path="/tech" element={<TechPage />} />
+            <Route path="/projects" element={<ProjectsPage/>}/>
             <Route path="*" element={<Navigate to="/" />} /> {/* Redirect unknown routes to home */}
           </Routes>
         </Suspense>

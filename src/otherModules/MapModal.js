@@ -36,8 +36,8 @@ function MapModal({ showMap, closeMap }) {
                     <NavLink to="/Tech" className="link" activeClassName="active">
                         Tech & Tools {location.pathname === "/Tech" && <FontAwesomeIcon icon={faLocationDot} className="location-dot" />}
                     </NavLink>
-                    <NavLink to="/" className="link" activeClassName="active">
-                        Projects
+                    <NavLink to="/projects" className="link" activeClassName="active">
+                        Projects {location.pathname === "/projects" && <FontAwesomeIcon icon={faLocationDot} className="location-dot" />}
                     </NavLink>
                     <div className='text-contact'>Contact me:</div>
                     <div className='icon-container'>
