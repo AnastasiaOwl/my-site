@@ -1,12 +1,13 @@
 import React, { useState, useEffect} from "react"
 import MapModal from '../otherModules/MapModal';
-import {NavLink,  useLocation} from 'react-router-dom';
+import {useNavigate, NavLink,  useLocation} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faArrowRight, faMapLocationDot} from '@fortawesome/free-solid-svg-icons';
 import '../styles/tech.css'
 
 function TechPage(){
     const [showMap, setShowMap] = useState(false); 
+    const navigate = useNavigate();
     const location = useLocation();
     
   const openMap = () => {
@@ -16,6 +17,10 @@ function TechPage(){
   const closeMap = () => {
     setShowMap(false); 
   }
+
+  const handleNextClick = () => {
+    navigate('/projects'); 
+};
 
     return(
     <>
@@ -32,7 +37,7 @@ function TechPage(){
                     <div className='icon node'></div>
                     <div className='icon css'></div>
                 </div>
-                <button type="button" className='button-next-tech'>
+                <button type="button" className='button-next-tech'  onClick={handleNextClick}>
                     Next <FontAwesomeIcon icon={faArrowRight} />
                 </button>
             </div>

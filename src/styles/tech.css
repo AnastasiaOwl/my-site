@@ -47,29 +47,29 @@
     }
     
     .js {
-        background-image: url('../background-images/colored_neon_js_icon.png');
+        background-image: url('../background-images/icons-tools/colored_neon_js_icon.png');
     }
     
     .react {
-        background-image: url('../background-images/pixelcut-export.png');
+        background-image: url('../background-images/icons-tools/pixelcut-export.png');
     }
     
     .git {
-        background-image: url('../background-images/Github_icon-icons.com_66788.png');
+        background-image: url('../background-images/icons-tools/Github_icon-icons.com_66788.png');
     }
     
     .db {
-        background-image: url('../background-images/Db-Icon-PNG-Photo.png');
+        background-image: url('../background-images/icons-tools/Db-Icon-PNG-Photo.png');
     }
     
     .node {
-        background-image: url('../background-images/node_js_logo_white_to_blue.png');
+        background-image: url('../background-images/icons-tools/node_js_logo_white_to_blue.png');
         height: 180px; 
         width: 180px;
     }
     
     .css {
-        background-image: url('../background-images/html-css-js-icons-11563328364gmstz4ubs9.png');
+        background-image: url('../background-images/icons-tools/html-css-js-icons-11563328364gmstz4ubs9.png');
     }
 
     .button-next-tech{

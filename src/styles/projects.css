@@ -17,14 +17,14 @@
   .projectRent{
     display: flex;
     flex-direction: column;
-    margin-top: 350px;
+    margin-top: 100px;
     margin-left: 50px;
   }
 
   .projectTools,
   .projectText{
     font-size: 16px;
-    width: 400px;
+    width: 480px;
     color:rgb(83, 175, 255);
     display:flex;
     font-family: 'Consolas';
@@ -33,3 +33,78 @@
     padding-top: 10px;
     font-size: 17px;
   }
+
+  .projectImage{
+        width: 500px;
+        height: 250px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        cursor: pointer; 
+        display: flex;
+        margin-bottom:10px;
+  }
+
+  .projectImage:hover {
+    transform: scale(1.1);
+}
+
+  .rent{
+    background-image: url('../background-images/rent-photo/rent-main.png');
+  }
+
+  .modal-image {
+    position: fixed;
+    width: 80%;
+    height: 90%;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #001b2cc6;
+    border-radius: 8px;
+    z-index: 1000;
+    border: 4px solid rgb(23, 236, 255);
+}
+
+  .modal-image img.projectImage-zoom {
+    width: 90%; 
+    height: auto; 
+    max-height: 85%; 
+    border-radius: 10px;
+    display: block;
+    object-fit: contain; 
+}
+
+.modal-image-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: rgb(23, 236, 255);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.galary{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-image-prev img.prev-arrow,
+.modal-image-next img.next-arrow {
+  width: 40px;
+  height: 70px; 
+}
+
+.modal-image-prev,
+.modal-image-next {
+  background: none; 
+  border: none; 
+  cursor: pointer;
+}

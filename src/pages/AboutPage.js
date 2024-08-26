@@ -44,9 +44,9 @@ function AboutPage(){
     return(
         <>
          <MapModal showMap={showMap} closeMap={closeMap} />
-         <button type="button" className='map' onClick={openMap}><FontAwesomeIcon icon={faMapLocationDot}/></button>
         <div className='aboutPage'>
-        <div className='aboutPage-image'>
+        <div className='aboutPage-image'> 
+            <button type="button" className='map' onClick={openMap}><FontAwesomeIcon icon={faMapLocationDot}/></button>
             <div className='container'>
                  <div className='aboutPage-text'>{displayedText}</div>
                  {typingComplete && (
