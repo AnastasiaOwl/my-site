@@ -74,7 +74,9 @@ const goToPrevImage = () => {
          <div className='projectsPage'>
            <div className='projectsPage-image'>
            <button type="button" className='map' onClick={openMap}><FontAwesomeIcon icon={faMapLocationDot}/></button>
+           <div className="projects">
                 <div className="projectRent">
+                   <div className="projectName"> Rental App </div>
                     <div 
                         className="projectImage rent" 
                         style={{ backgroundImage: `url(${rentImage})` }} 
@@ -86,6 +88,7 @@ const goToPrevImage = () => {
                     <div className="projectTools"> Technologies Used: JavaScript, css, MySQL database, React, Node.js</div>
                 </div>
                 <div className="projectToDo">
+                    <div className="projectName"> My ToDoList </div>
                     <div 
                     className="projectImage todo"
                     style={{ backgroundImage: `url(${todoImage})`}}
@@ -96,6 +99,7 @@ const goToPrevImage = () => {
                     <div className="todoTools">Technologies Used: JavaScript, css, React</div>
                 </div>
                 <div className="projectDormitory">
+                    <div className="projectName"> Dormitory registration </div>
                     <div 
                     className="projectImage dormitory"
                     style={{ backgroundImage: `url(${dormitoryImage})`}}
@@ -104,8 +108,9 @@ const goToPrevImage = () => {
                     <div className="dormitoryText">This project is a comprehensive Student Dormitory
                         Management System designed to streamline operations for
                         administrators, accountants, and dormitory staff.</div>
-                    <div className="dormitoryTools">Java, Git, html/css, Spring, Mariadb database</div>
+                    <div className="dormitoryTools">Technologies Used: Java, Git, html/css, Spring, Mariadb database</div>
                 </div>
+            </div>
            </div>
         </div>
         </>

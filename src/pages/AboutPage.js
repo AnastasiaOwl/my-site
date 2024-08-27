@@ -33,8 +33,19 @@ function AboutPage(){
             }
         }, 30); 
 
+        const handleKeyDown = (event) => {
+            if (event.key === 'Enter') {
+                setDisplayedText(fullText);
+                clearInterval(interval);
+                setTypingComplete(true);
+            }
+        };
+    
+        document.addEventListener('keydown', handleKeyDown);
+
         return () => clearInterval(interval);
     }, [fullText]);
+
 
     const handleNextClick = () => {
         navigate('/tech'); 
