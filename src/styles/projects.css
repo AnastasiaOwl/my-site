@@ -12,37 +12,62 @@
     background-repeat: no-repeat;
     background-size: cover; 
     display: flex;
+    align-items: center;
   }
 
+  .projectDormitory,
+  .projectToDo,
   .projectRent{
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
-    margin-left: 50px;
   }
 
+  .projectDormitory,
+  .projectRent{
+    margin-top: 30px;
+  }
+  .projectToDo,
+  .projectDormitory{
+    width: 450px;
+    margin-left: 15px;
+  }
+  .dormitoryText,
+  .dormitoryTools,
+  .todoText,
+  .todoTools,
   .projectTools,
   .projectText{
     font-size: 16px;
-    width: 480px;
+    width: 450px;
     color:rgb(83, 175, 255);
     display:flex;
     font-family: 'Consolas';
     text-align: justify; 
     line-height: 1.8;
     padding-top: 10px;
+    margin-left: 40px;
     font-size: 17px;
   }
 
+  .todoText,
+  .todoTools{
+    width: 420px;
+  }
+  .dormitoryText,
+  .dormitoryTools{
+    width: 400px;
+  }
+
   .projectImage{
-        width: 500px;
+        width: 450px;
         height: 250px;
         background-size: contain;
         background-repeat: no-repeat;
         transition: transform 0.3s ease, box-shadow 0.3s ease; 
         cursor: pointer; 
         display: flex;
-        margin-bottom:10px;
+        margin-left: 40px;
+        margin-bottom: 20px;
   }
 
   .projectImage:hover {
@@ -51,6 +76,15 @@
 
   .rent{
     background-image: url('../background-images/rent-photo/rent-main.png');
+  }
+
+  .todo{
+    background-image: url('../background-images/todo-photo/todo-main.png');
+  }
+
+  .dormitory{
+    background-image: url('../background-images/dormitory-photo/dormitory-main.png');
+    width: 400px;
   }
 
   .modal-image {
@@ -107,4 +141,18 @@
   background: none; 
   border: none; 
   cursor: pointer;
+}
+
+.map{
+  position: absolute; 
+  top: 20px;
+  right: 80px;
+  background-color: transparent;
+  border: none;
+  color:rgb(23, 236, 255);
+  cursor: pointer;
+  font-size: 30px;
+}
+.map:hover{
+  font-size: 35px;
 }
