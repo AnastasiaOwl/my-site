@@ -173,3 +173,30 @@
 .map:hover{
   font-size: 35px;
 }
+.fade-out {
+  animation: fadeOutEffect 1.5s forwards;
+}
+
+.fade-in {
+  animation: fadeInEffect 1.5s forwards;
+}
+
+@keyframes fadeOutEffect {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    background-color: black;
+  }
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+    background-color: black;
+  }
+  to {
+    opacity: 1;
+  }
+}

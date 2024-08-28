@@ -1,9 +1,10 @@
 import React, { useState, useEffect} from "react"
 import MapModal from '../otherModules/MapModal';
 import ImageModal from "../otherModules/ImageModal";
-import { useNavigate,  useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faArrowRight, faMapLocationDot} from '@fortawesome/free-solid-svg-icons';
+import {faMapLocationDot} from '@fortawesome/free-solid-svg-icons';
+import useSound from 'use-sound';
+import clickSound from '../sounds/click.mp3'; 
 import rentImage from '../background-images/rent-photo/rent-main.png';
 import todoImage from '../background-images/todo-photo/todo-main.png';
 import dormitoryImage from '../background-images/dormitory-photo/dormitory-main.png'
@@ -26,9 +27,10 @@ import '../styles/App.css'
 function ProjectsPage(){
     const [showMap, setShowMap] = useState(false); 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [play] = useSound(clickSound, { volume: 0.8 });
+    const [fadeOut, setFadeOut] = useState(false); 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [images, setImages] = useState([]);
-    const location = useLocation();
 
     const rentImages = [rentImage, rentImage1, rentImage2, rentImage3, rentImage4];
     const todoImages = [todoImage, todoImage1, todoImage2, todoImage3, todoImage4];
@@ -71,7 +73,7 @@ const goToPrevImage = () => {
             goToNextImage={goToNextImage}
             goToPrevImage={goToPrevImage}
          />
-         <div className='projectsPage'>
+        <div className={`projectsPage ${fadeOut ? 'fade-out' : 'fade-in'}`}>
            <div className='projectsPage-image'>
            <button type="button" className='map' onClick={openMap}><FontAwesomeIcon icon={faMapLocationDot}/></button>
            <div className="projects">
@@ -79,6 +81,7 @@ const goToPrevImage = () => {
                    <div className="projectName"> Rental App </div>
                     <div 
                         className="projectImage rent" 
+                        onMouseEnter={play}
                         style={{ backgroundImage: `url(${rentImage})` }} 
                         onClick={() => openModal(rentImages, 0)}
                     ></div>
@@ -91,6 +94,7 @@ const goToPrevImage = () => {
                     <div className="projectName"> My ToDoList </div>
                     <div 
                     className="projectImage todo"
+                    onMouseEnter={play}
                     style={{ backgroundImage: `url(${todoImage})`}}
                     onClick={() => openModal(todoImages, 0)}
                     ></div>
@@ -102,6 +106,7 @@ const goToPrevImage = () => {
                     <div className="projectName"> Dormitory registration </div>
                     <div 
                     className="projectImage dormitory"
+                    onMouseEnter={play}
                     style={{ backgroundImage: `url(${dormitoryImage})`}}
                     onClick={() => openModal(dormitoryImages, 0)}
                     ></div>

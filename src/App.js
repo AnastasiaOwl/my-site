@@ -37,12 +37,12 @@ function App() {
   if (showAboutPage) {
     return (
       <Router>
-        <Suspense fallback={<div>Loading...</div>}>
+         <Suspense fallback={<div className="suspense-fallback fade-in"></div>}>
           <Routes>
-            <Route path="/" element={<AboutPage />} />
-            <Route path="/tech" element={<TechPage />} />
-            <Route path="/projects" element={<ProjectsPage/>}/>
-            <Route path="*" element={<Navigate to="/" />} /> {/* Redirect unknown routes to home */}
+            <Route path="/" element={<div className="fade-in"><AboutPage /></div>} />
+            <Route path="/tech" element={<div className="fade-in"><TechPage /></div>} />
+            <Route path="/projects" element={<div className="fade-in"><ProjectsPage/></div>}/>
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Suspense>
       </Router>
