@@ -1,6 +1,6 @@
 import React, { useState} from "react"
 import MapModal from '../otherModules/MapModal';
-import {useNavigate, useLocation} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useSound from 'use-sound';
 import clickSound from '../sounds/click.mp3'; 

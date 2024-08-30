@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from "react"
 import MapModal from '../otherModules/MapModal';
-import { useNavigate,  useLocation } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faArrowRight, faMapLocationDot} from '@fortawesome/free-solid-svg-icons';
 import '../styles/about.css'
