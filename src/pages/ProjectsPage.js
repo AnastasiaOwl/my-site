@@ -1,4 +1,5 @@
 import React, { useState} from "react"
+import { useLocation } from 'react-router-dom';
 import MapModal from '../otherModules/MapModal';
 import ImageModal from "../otherModules/ImageModal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -27,6 +28,7 @@ import '../styles/App.css'
 function ProjectsPage(){
     const [showMap, setShowMap] = useState(false); 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const location = useLocation(); 
     const [play] = useSound(clickSound, { volume: 0.8 });
     const [fadeOut] = useState(false); 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -64,7 +66,7 @@ const goToPrevImage = () => {
 
     return(
         <>
-         <MapModal showMap={showMap} closeMap={closeMap} />
+         <MapModal showMap={showMap} closeMap={closeMap} currentPath={location.pathname} />
          <ImageModal 
             showImage={isModalOpen} 
             closeImage={closeModal} 

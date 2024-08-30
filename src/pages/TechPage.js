@@ -1,6 +1,6 @@
-import React, { useState} from "react"
+import React, { useState, useEffect} from "react"
 import MapModal from '../otherModules/MapModal';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate, useLocation} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useSound from 'use-sound';
 import clickSound from '../sounds/click.mp3'; 
@@ -10,8 +10,15 @@ import '../styles/tech.css'
 function TechPage(){
     const [showMap, setShowMap] = useState(false); 
     const [fadeOut, setFadeOut] = useState(false); 
+    const [currentPath, setCurrentPath] = useState("");
+    const location = useLocation(); 
     const navigate = useNavigate();
     const [play] = useSound(clickSound, { volume: 0.8 });
+
+    useEffect(() => {
+        setCurrentPath(location.pathname);
+    }, [location]);
+
     
   const openMap = () => {
     setShowMap(true); 
@@ -30,7 +37,7 @@ function TechPage(){
 
     return(
     <>
-    <MapModal showMap={showMap} closeMap={closeMap} />
+    <MapModal showMap={showMap} closeMap={closeMap} currentPath={currentPath}/>
     <div className={`techPage ${fadeOut ? 'fade-out' : 'fade-in'}`}>
         <div className='techPage-image'>
             <button type="button" className='map' onClick={openMap}><FontAwesomeIcon icon={faMapLocationDot}/></button>

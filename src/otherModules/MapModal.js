@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from './Modal';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faTelegram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -8,8 +8,7 @@ import useSound from 'use-sound';
 import menuSound from '../sounds/menu.mp3';
 import '../styles/App.css';
 
-function MapModal({ showMap, closeMap }) {
-    const location = useLocation();
+function MapModal({ showMap, closeMap, currentPath }) {
     const [play] = useSound(menuSound, { volume: 1.8 });
 
     const openLinkedIn = () => {
@@ -34,13 +33,13 @@ function MapModal({ showMap, closeMap }) {
             <Modal onClose={closeMap}>
                 <form className='map-form'>
                     <NavLink to="/About" className="link" activeClassName="active" onMouseEnter={play}>
-                        About {location.pathname === "/" && <FontAwesomeIcon icon={faLocationDot} className="location-dot" />}
+                        About {currentPath ===  "/" && <FontAwesomeIcon icon={faLocationDot} className="location-dot" />}
                     </NavLink>
                     <NavLink to="/Tech" className="link" activeClassName="active" onMouseEnter={play}>
-                        Tech & Tools {location.pathname === "/Tech" && <FontAwesomeIcon icon={faLocationDot} className="location-dot" />}
+                        Tech & Tools {currentPath ===  "/Tech" && <FontAwesomeIcon icon={faLocationDot} className="location-dot" />}
                     </NavLink>
                     <NavLink to="/projects" className="link" activeClassName="active" onMouseEnter={play}>
-                        Projects {location.pathname === "/projects" && <FontAwesomeIcon icon={faLocationDot} className="location-dot" />}
+                        Projects {currentPath ===  "/projects" && <FontAwesomeIcon icon={faLocationDot} className="location-dot" />}
                     </NavLink>
                     <div className='text-contact'>Contact me:</div>
                     <div className='icon-container'>
