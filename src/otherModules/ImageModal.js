@@ -6,8 +6,8 @@ import useSound from 'use-sound';
 import '../styles/projects.css';
 
 function ImageModal({ showImage, closeImage, images, currentIndex, goToNextImage, goToPrevImage }) {
-    if (!showImage) return null;
     const [play] = useSound(slideSound, { volume: 0.5 });
+    if (!showImage) return null;
 
     return (
         <div className="modal-image">
