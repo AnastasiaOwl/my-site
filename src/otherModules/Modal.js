@@ -17,8 +17,6 @@ const Modal = ({ onClose, children, formdata, setformdata }) => {
   
     if (dragging) {
       const modal = modalRef.current;
-      const modalWidth = modal.offsetWidth;
-      const modalHeight = modal.offsetHeight;
   
       const deltaX = e.clientX - position.x;
       const deltaY = e.clientY - position.y;

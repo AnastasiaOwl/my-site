@@ -1,6 +1,6 @@
-import React, { useState, useEffect} from "react"
+import React, { useState} from "react"
 import MapModal from '../otherModules/MapModal';
-import {useNavigate, NavLink,  useLocation} from 'react-router-dom';
+import {useNavigate, useLocation} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useSound from 'use-sound';
 import clickSound from '../sounds/click.mp3'; 
@@ -12,7 +12,6 @@ function TechPage(){
     const [fadeOut, setFadeOut] = useState(false); 
     const navigate = useNavigate();
     const [play] = useSound(clickSound, { volume: 0.8 });
-    const location = useLocation();
     
   const openMap = () => {
     setShowMap(true); 

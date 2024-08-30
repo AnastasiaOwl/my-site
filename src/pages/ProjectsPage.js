@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react"
+import React, { useState} from "react"
 import MapModal from '../otherModules/MapModal';
 import ImageModal from "../otherModules/ImageModal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -28,7 +28,7 @@ function ProjectsPage(){
     const [showMap, setShowMap] = useState(false); 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [play] = useSound(clickSound, { volume: 0.8 });
-    const [fadeOut, setFadeOut] = useState(false); 
+    const [fadeOut] = useState(false); 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [images, setImages] = useState([]);
 
