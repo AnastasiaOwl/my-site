@@ -3,8 +3,8 @@ import MapModal from '../otherModules/MapModal';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faArrowRight, faMapLocationDot} from '@fortawesome/free-solid-svg-icons';
-import '../styles/about.css'
 import '../styles/App.css'
+import '../styles/about.css'
 
 function AboutPage(){
     const [displayedText, setDisplayedText] = useState('');

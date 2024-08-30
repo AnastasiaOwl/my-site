@@ -1,6 +1,7 @@
 .projectsPage{
     background-color: rgb(0, 0, 0);
     height: 100vh;
+    overflow: hidden; 
   }
 
   .projectsPage-image {
@@ -9,10 +10,11 @@
     background-image: 
     linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.211) 20%, rgba(0, 0, 0, 0.386) 80%, rgba(0, 0, 0, 0.907)), 
     url('../background-images/vecteezy_abstract-technology-futuristic-neon-curved-glowing-blue-and_16178545.jpg'); 
-    background-repeat: no-repeat;
     background-size: cover; 
-    display: flex;
-    align-items: center;
+    background-repeat: no-repeat; 
+    background-position: center;  
+    display: grid;
+    justify-items: center;
   }
 
   .projectDormitory,
@@ -24,18 +26,17 @@
 
   .projects{
     display:flex;
-    align-items: center;
-    margin-left: 45px;
+    align-items: center; 
   }
 
   .projectDormitory,
   .projectRent{
-    margin-top: 30px;
+    margin-top: 2vw;
   }
   .projectToDo,
   .projectDormitory{
-    width: 450px;
-    margin-left: 15px;
+    width: 30vw;
+    margin-left: 2vw;
   }
 
   
@@ -45,46 +46,44 @@
   .todoTools,
   .projectTools,
   .projectText{
-    font-size: 16px;
-    width: 450px;
+    font-size: 1.2vw; 
+    width: 30vw;
     color:rgb(23, 236, 255);
     display:flex;
     font-family: 'Consolas';
     text-align: justify; 
     line-height: 1.8;
-    padding-top: 10px;
-    margin-left: 40px;
+    padding-top: 1.3vw;
+    margin-left: 2vw;
   }
 
   .projectName{
-    font-size: 24px;
+    font-size: 1.6vw; 
     color:rgb(23, 236, 255);
     display:flex;
     align-self: center;
     font-family: 'Consolas';
     text-align: justify; 
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin-bottom: 2vw;
   }
 
   .todoText,
   .todoTools{
-    width: 420px;
+    width: 27.4vw;
   }
   .dormitoryText,
   .dormitoryTools{
-    width: 400px;
+    width: 26.8vw;
   }
 
   .projectImage{
-        height: 250px;
+        height: 16.3vw;
         background-size: contain;
         background-repeat: no-repeat;
         transition: transform 0.3s ease, box-shadow 0.3s ease; 
         cursor: pointer; 
         display: flex;
-        margin-left: 40px;
-        margin-bottom: 20px;
   }
 
   .projectImage:hover {
@@ -101,7 +100,6 @@
 
   .dormitory{
     background-image: url('../background-images/dormitory-photo/dormitory-main.png');
-    width: 400px;
   }
 
   .modal-image {
@@ -162,17 +160,18 @@
 
 .map{
   position: absolute; 
-  top: 20px;
-  right: 80px;
+  top: 2vh;
+  right: 5vw;
   background-color: transparent;
   border: none;
   color:rgb(23, 236, 255);
   cursor: pointer;
-  font-size: 30px;
+  font-size: 2.5vw;
 }
 .map:hover{
-  font-size: 35px;
+  font-size: 3vw;
 }
+
 .fade-out {
   animation: fadeOutEffect 1.5s forwards;
 }
