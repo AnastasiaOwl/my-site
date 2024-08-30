@@ -25,18 +25,20 @@
   }
 
   .projects{
-    display:flex;
-    align-items: center; 
+    display: flex;
+    place-self: center;
+    justify-content: space-around;
+    width: 100%;
   }
 
-  .projectDormitory,
   .projectRent{
-    margin-top: 2vw;
-  }
-  .projectToDo,
-  .projectDormitory{
     width: 30vw;
     margin-left: 2vw;
+  }
+
+  .projectToDo,
+  .projectDormitory{
+    width:25vw;
   }
 
   
@@ -47,14 +49,12 @@
   .projectTools,
   .projectText{
     font-size: 1.2vw; 
-    width: 30vw;
     color:rgb(23, 236, 255);
     display:flex;
     font-family: 'Consolas';
     text-align: justify; 
     line-height: 1.8;
     padding-top: 1.3vw;
-    margin-left: 2vw;
   }
 
   .projectName{
@@ -66,15 +66,6 @@
     text-align: justify; 
     line-height: 1.8;
     margin-bottom: 2vw;
-  }
-
-  .todoText,
-  .todoTools{
-    width: 27.4vw;
-  }
-  .dormitoryText,
-  .dormitoryTools{
-    width: 26.8vw;
   }
 
   .projectImage{
@@ -161,15 +152,15 @@
 .map{
   position: absolute; 
   top: 2vh;
-  right: 5vw;
+  right: 1.5vw;
   background-color: transparent;
   border: none;
   color:rgb(23, 236, 255);
   cursor: pointer;
-  font-size: 2.5vw;
+  font-size: 2.3vw;
 }
 .map:hover{
-  font-size: 3vw;
+  font-size: 2.6vw;
 }
 
 .fade-out {
