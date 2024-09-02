@@ -97,17 +97,12 @@
   @media (max-width: 480px) {
    
     .aboutPage-image{
-    height: auto; /* Let the height adjust based on the content */
-    width: 100%;
-    background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.211) 20%, rgba(0, 0, 0, 0.386) 80%, rgba(0, 0, 0, 0.907)), 
-    url('../background-images/aboutPage.jpg'); 
-    background-size: contain; 
-    background-repeat: no-repeat; 
-    background-position: center;  
-    background-color: black; 
-    display: flex;
-    justify-content: center;
+      width: 480px;
+      background-image: 
+      url('../background-images/aboutPage.jpg'); 
+      background-repeat: no-repeat; 
+      display: flex;
+      justify-content: center;
     }
     .container{
       max-width: 75vw;
@@ -115,6 +110,9 @@
     .button-next,
     .aboutPage-text {
       font-size: 2.1vw;
+    }
+    .button-next:hover{
+      font-size: 3vw;
     }
   }
   

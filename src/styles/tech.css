@@ -129,3 +129,41 @@
           opacity: 1;
         }
       }
+
+      @media (max-width: 480px) {
+        .techPage-image{
+          width: 480px;
+          background-image: 
+          url('../background-images/aboutPage.jpg'); 
+          background-repeat: no-repeat; 
+          display: flex;
+          justify-content: center;
+          }
+          .container-tech{
+            max-width: 80vw; 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            place-self: center;
+            justify-content: flex-start;
+          }
+          .icons-tech{
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 7vw; 
+            margin-top: 1.5vw;
+          }
+          .icon {
+            width: 15vw;
+            height: 15vw;
+        }
+        .button-next-tech{
+          margin-top:5vw;
+          font-size: 3vw; 
+        }
+        .button-next-tech:hover{
+          font-size: 3.5vw;
+        }
+      }

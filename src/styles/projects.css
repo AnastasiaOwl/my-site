@@ -190,3 +190,15 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 480px) {
+  .projects{
+    display: flex;
+    place-self: center;
+    justify-content: space-around;
+    width: 120%;
+  }
+  .modal-image{
+    height: 70%;
+  }
+}

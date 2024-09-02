@@ -11,6 +11,7 @@ function App() {
   const [neonActive, setNeonActive] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
   const [showAboutPage, setShowAboutPage] = useState(false);
+  const [isPortrait, setIsPortrait] = useState(window.orientation === 0 || window.orientation === 180);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,13 +26,24 @@ function App() {
       setShowAboutPage(true);
     }, 11000);
 
+    handleOrientationChange();
+
+    window.addEventListener("orientationchange", handleOrientationChange);
 
     return () => {
       clearTimeout(timer);
       clearTimeout(fadeOutTimer);
       clearTimeout(transitionTimer);
+      window.removeEventListener("orientationchange", handleOrientationChange);
+
     }
   }, []);
+
+  const handleOrientationChange = () => {
+    const isPortraitMode = window.orientation === 0 || window.orientation === 180;
+    setIsPortrait(isPortraitMode);
+  };
+
 
  
   if (showAboutPage) {
@@ -48,23 +60,29 @@ function App() {
       </Router>
     );
   }
+  
 
   return (
-    <div class="landscape-content">
-      <div className={`App ${fadeOut ? 'fade-out' : ''}`}>
-        <div className={`intro-image ${neonActive ? 'neon-active' : ''}`}>
-          {neonActive && <div className="neon-background"></div>}
-          <div className="intro-text">
-            <div className="intro-text-part1"> 
-              <span className="intro-letter-blinkJ">J</span>ava<span className="intro-letter-blinkS">S</span>cript
+    <div>
+    {isPortrait ? (
+      <div className="portrait-message">
+        Please rotate your device to landscape mode for the best experience.
+      </div>
+    ) : (
+      <div className="landscape-content">
+        <div className={`App ${fadeOut ? 'fade-out' : ''}`}>
+          <div className={`intro-image ${neonActive ? 'neon-active' : ''}`}>
+            {neonActive && <div className="neon-background"></div>}
+            <div className="intro-text">
+              <div className="intro-text-part1">
+                <span className="intro-letter-blinkJ">J</span>ava<span className="intro-letter-blinkS">S</span>cript
+              </div>
+              <div className="intro-text-part2">Developer</div>
             </div>
-            <div className="intro-text-part2">Developer</div>
           </div>
         </div>
-    </div>
-    <div class="portrait-message">
-     Please rotate your device to landscape mode for the best experience.
-    </div>
+      </div>
+    )}
   </div>
   );
 }
