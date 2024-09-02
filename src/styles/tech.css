@@ -7,9 +7,7 @@
   .techPage-image {
     height: 100%;
     width: 100%;
-    background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.211) 20%, rgba(0, 0, 0, 0.386) 80%, rgba(0, 0, 0, 0.907)), 
-    url('../background-images/aboutPage.jpg'); 
+    background-image: url('../background-images/aboutPage.jpg');  
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center;  
