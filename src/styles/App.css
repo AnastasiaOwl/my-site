@@ -324,3 +324,32 @@ html, body {
     font-size:3vw;
   }
 }
+@media only screen and (orientation: landscape) {
+  .landscape-content {
+    display: block;
+  }
+
+  .portrait-message {
+    display: none;
+  }
+}
+@media only screen and (orientation: portrait) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+
+  .landscape-content {
+    display: none;
+  }
+
+  .portrait-message {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 5vw;
+    padding: 10vw;
+  }
+}
