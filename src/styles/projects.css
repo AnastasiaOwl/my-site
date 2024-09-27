@@ -17,7 +17,7 @@
     justify-items: center;
   }
 
-  .projectDormitory,
+  .projectGame,
   .projectToDo,
   .projectRent{
     display: flex;
@@ -32,18 +32,18 @@
   }
 
   .projectRent{
-    width: 30vw;
+    width: 27vw;
     margin-left: 2vw;
   }
 
   .projectToDo,
-  .projectDormitory{
+  .projectGame{
     width:25vw;
   }
 
   
-  .dormitoryText,
-  .dormitoryTools,
+  .gameText,
+  .gameTools,
   .todoText,
   .todoTools,
   .projectTools,
@@ -69,7 +69,7 @@
   }
 
   .projectImage{
-        height: 16.3vw;
+        height: 14vw;
         background-size: contain;
         background-repeat: no-repeat;
         transition: transform 0.3s ease, box-shadow 0.3s ease; 
@@ -89,8 +89,8 @@
     background-image: url('../background-images/todo-photo/todo-main.png');
   }
 
-  .dormitory{
-    background-image: url('../background-images/dormitory-photo/dormitory-main.png');
+  .game{
+    background-image: url('../background-images/game-photo/game-main.png');
   }
 
   .modal-image {
