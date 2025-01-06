@@ -43,12 +43,34 @@ function TechPage(){
             <button type="button" className='map' onClick={openMap}><FontAwesomeIcon icon={faMapLocationDot}/></button>
             <div className='container-tech'>
                 <div className='icons-tech'>
-                <div className='icon js' onMouseEnter={play}></div>
-                <div className='icon react' onMouseEnter={play}></div>
-                <div className='icon git' onMouseEnter={play}></div>
-                <div className='icon db' onMouseEnter={play}></div>
-                <div className='icon node' onMouseEnter={play}></div>
-                <div className='icon css' onMouseEnter={play}></div>
+                    <span className="tool">
+                        <img alt = "" className='icon js' onMouseEnter={play}></img>
+                        <p className="icon-text">JavaScript</p>
+                    </span>
+                    <span className="tool">
+                        <div className='icon typescript' onMouseEnter={play}></div>
+                        <p className="icon-text">TypeScript</p>
+                    </span>
+                    <span className="tool">
+                        <div className='icon scss' onMouseEnter={play}></div>
+                        <p className="icon-text">CSS & SCSS</p>
+                    </span>
+                    <span className="tool">
+                        <div className='icon react' onMouseEnter={play}></div>
+                        <p className="icon-text">React.js & React Native</p>
+                    </span>
+                    <span className="tool">
+                        <div className='icon node' onMouseEnter={play}></div>
+                        <p className="icon-text">Node.js</p>
+                    </span>
+                    <span className="tool">
+                        <div className='icon git' onMouseEnter={play}></div>
+                        <p className="icon-text">GitHub</p>
+                    </span>
+                    <span className="tool">
+                        <div className='icon db' onMouseEnter={play}></div>
+                        <p className="icon-text">MySQL</p>
+                    </span>
                 </div>
                 <button type="button" className='button-next-tech'  onClick={handleNextClick}>
                     Next <FontAwesomeIcon icon={faArrowRight} />

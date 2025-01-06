@@ -42,35 +42,51 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease; 
         cursor: pointer; 
     }
+
+    .icon-text{
+      color:rgb(23, 236, 255);
+      place-self: center;
+      font-size: 1.5vw;
+      margin-top: 0.25vw;
+    }
     
-    .icon:hover {
+    .tool{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .tool:hover {
         transform: scale(1.2);
     }
     
     .js {
-        background-image: url('../background-images/icons-tools/colored_neon_js_icon.png');
+        background-image: url('../background-images/icons-tools/js.png');
     }
     
     .react {
-        background-image: url('../background-images/icons-tools/pixelcut-export.png');
+        background-image: url('../background-images/icons-tools/react.png');
     }
     
     .git {
-        background-image: url('../background-images/icons-tools/Github_icon-icons.com_66788.png');
+        background-image: url('../background-images/icons-tools/github.png');
     }
     
     .db {
-        background-image: url('../background-images/icons-tools/Db-Icon-PNG-Photo.png');
+        background-image: url('../background-images/icons-tools/db.png');
     }
     
     .node {
-        background-image: url('../background-images/icons-tools/node_js_logo_white_to_blue.png');
-        height: 12vw; 
+        background-image: url('../background-images/icons-tools/nodejs.png');
+        height: 8vw; 
         width: 12vw;
     }
     
-    .css {
-        background-image: url('../background-images/icons-tools/html-css-js-icons-11563328364gmstz4ubs9.png');
+    .scss {
+        background-image: url('../background-images/icons-tools/scss.png');
+    }
+
+    .typescript {
+      background-image: url('../background-images/icons-tools/typescript.png');
     }
 
     .button-next-tech{

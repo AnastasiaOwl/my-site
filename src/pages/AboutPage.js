@@ -13,7 +13,11 @@ function AboutPage(){
     const [showMap, setShowMap] = useState(false); 
     const location = useLocation(); 
     const navigate = useNavigate();
-    const fullText = `Hello! I am Anastasiia and I am currently a student specializing in software engineering, with a strong foundation in object-oriented programming (OOP). My primary focus is on advancing my skills in JavaScript, including technologies such as the React library and the Node.js runtime environment. I am dedicated to mastering these technologies, as they are essential for building modern, dynamic web applications. Alongside my programming expertise, I have practical experience using GitHub for version control and collaboration, and I am continuously expanding my knowledge in database management to ensure seamless integration of front-end and back-end systems.\n\nPress next to see my main tools and technologies...`; 
+    const fullText = `Hello! My name is Anastasiia and I am a software engineering trainee with a solid foundation 
+    in object-oriented programming (OOP) and a focus on building modern, dynamic web applications using JavaScript.
+     Experienced with GitHub for version control and collaboration, ensuring efficient team workflows. 
+     Currently expanding expertise in database management to seamlessly integrate front-end and back-end systems.
+     \n\nPress next to see my main tools and technologies...`; 
     
     const openMap = () => {
      setShowMap(true); 
