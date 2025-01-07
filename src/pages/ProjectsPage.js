@@ -102,7 +102,10 @@ const goToPrevImage = () => {
                     <div className="projectTools"> Technologies Used: JavaScript, css, MySQL database, React.js, Node.js</div>
                 </div>
                 <div className="projectKoLingva">
-                        <div className="projectName"> KoLingva </div>
+                        <div className="projectName">
+                            <a href="https://kolingva.com/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            KoLingva</a>
+                        </div>
                             <div 
                                 className="projectImage kolingva" 
                                 onMouseEnter={play}
